@@ -11,7 +11,7 @@
 		"express": ">0",
 		"body-parser":"*",
 		"method-override":"*",
-		"errorhandler":"*",
+		"error-handler":"*",
 		"superagent": "*",
 		"JSONStream": "*",
 		"event-stream": "*"

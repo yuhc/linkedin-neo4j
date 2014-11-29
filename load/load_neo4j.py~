@@ -26,6 +26,11 @@ SECRET = sys.argv[2]
 OAUTH_TOKEN = sys.argv[3]
 OAUTH_TOKEN_SECRET = sys.argv[4]
 
+KEY = "75bnejqmz9u94k"
+SECRET = "27jEuZCVTaDJbkd0"
+OAUTH_TOKEN = "2df5b520-a748-44b1-bba3-5a8a5c2b8391"
+OAUTH_TOKEN_SECRET = "a15e5f38-0a42-45b6-a750-315db0daec6e"
+
 nodes = dict() 
 
 if __name__ == '__main__':
