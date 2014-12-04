@@ -1,0 +1,58 @@
+<html>
+<head>
+  <style type="text/css">
+    /* sigma.js context : */
+    .sigma {
+      margin-left:auto;
+      margin-right:auto;
+      position: relative;
+      border-radius: 4px;
+      -moz-border-radius: 4px;
+      -webkit-border-radius: 4px;
+      background: #222;
+      width: 80%;
+      height: 80%;
+      top: 0;
+      left: 0;
+    }
+  </style>
+
+</head>
+<body>
+
+  <div class="sigma" id="sig"></div>
+  <script type="text/javascript">
+      var sigInst = new sigma('sig');
+      sigInst.settings({
+        defaultLabelColor: '#ccc',
+        font: 'arial',
+        edgeColor: 'source',
+        defaultEdgeType: 'curve',
+        minNodeSize: 1,
+        maxNodeSize: 10
+      });
+
+      sigInst.graph.addNode({
+        id: 'hello',
+        label: 'Hello',
+        color: '#ff0000',
+        size: 1,
+        x: 1,
+        y: 0
+      }).addNode({
+        id :'world',
+        label: 'World !',
+        color: '#00ff00',
+        size: 1,
+        x: 2,
+        y: 0
+      }).addEdge({
+        id: 'hello_world',
+        source: 'hello',
+        target: 'world'
+       });
+       
+      sigInst.refresh();
+  </script>
+</body>
+</html>

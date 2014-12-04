@@ -1,22 +1,21 @@
-//function init() {
+function init() {
 	// Instanciate sigma.js and customize rendering :
-	var sigInst = sigma.init(document.getElementById('sigma-example')).drawingProperties({
+	var sigInst = new sigma(document.getElementById('sigma-example'));
+	sigInst.settings({
 		defaultLabelColor: '#fff',
 		defaultLabelSize: 14,
 		defaultLabelBGColor: '#fff',
 		defaultLabelHoverColor: '#000',
 		labelThreshold: 6,
-		defaultEdgeType: 'curve'
-	}).graphProperties({
+		defaultEdgeType: 'curve',
 		minNodeSize: 0.5,
 		maxNodeSize: 5,
 		minEdgeSize: 1,
-		maxEdgeSize: 1
-	}).mouseProperties({
-		maxRatio: 4
+		maxEdgeSize: 1,
+		zoomMax: 4
 	});
 
-	sigInst.parseJson('http://localhost:8080/', function (){
+	sigInst.parsers.json('http://localhost:8080/', function (){
 		// Bind events :
 		sigInst.bind('overnodes',function(event){
 		var nodes = event.content;
@@ -68,4 +67,4 @@ if (document.addEventListener) {
 	document.addEventListener("DOMContentLoaded", init, false);
 } else {
 	window.onload = init;
-//}
+}

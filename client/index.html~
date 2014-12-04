@@ -11,10 +11,7 @@
 	</head>
 	<body>
 
-		<div class="buttons-container">
-			<button class="btn" id="stop-layout">Freeze</button>
-			<button class="btn" id="rescale-graph">Rescale</button>
-		</div>
+		
 
 		<div class="span12 sigma-parent" id="sigma-example-parent">
 			<div class="sigma-expand" id="sigma-example"></div>
