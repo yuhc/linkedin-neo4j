@@ -39,13 +39,11 @@ function init() {
 			e.hidden = 0;
 		}).iterNodes(function(n){
 			n.hidden = 0;
-		}).draw(2,2,2);
-	}
-	  sigInst.refresh();
-	);
-
+		}).draw(2,2,2)
+	});
+	
 	// Draw the graph :
-	sigInst.draw();
+	sigInst.refresh();	
 	sigInst.startForceAtlas2();
 
 	var isRunning = true;

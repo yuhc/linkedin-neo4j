@@ -25,8 +25,9 @@ sendRels = function(res){
 		}
 
 		var rel = '{';
-		rel += '"sourceID": "' + data[0] + '", ';
-		rel += '"targetID": "' + data[1] + '", ';
+		rel += '"id": "' + data[0].split(" ")[0] + data[1].split(" ")[1] + Math.floor(Math.random()*100) + '", ';
+		rel += '"source": "' + data[0] + '", ';
+		rel += '"target": "' + data[1] + '", ';
 		rel += '"size": 1}';
 		res.write(rel);
 	});
