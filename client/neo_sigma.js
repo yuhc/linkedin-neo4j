@@ -1,10 +1,11 @@
 function init() {
-	// Instanciate sigma.js and customize rendering :
+	// Instanciate sigma.js and customize rendering
+	// https://github.com/jacomyal/sigma.js/wiki
 	var sigInst = new sigma(document.getElementById('sigma-example'));
 	sigInst.settings({
 		defaultLabelColor: '#fff',
 		defaultLabelSize: 14,
-		defaultLabelBGColor: '#fff',
+		defaultLabelColor: '#fff',
 		defaultLabelHoverColor: '#000',
 		labelThreshold: 6,
 		defaultEdgeType: 'curve',
@@ -15,7 +16,8 @@ function init() {
 		zoomMax: 4
 	});
 
-	sigma.parsers.json('http://localhost:8080/', function (){
+  // Parse the Json
+	sigma.parsers.json('http://localhost:8080/', sigInst, function () {
 		// Bind events :
 		sigInst.bind('overnodes',function(event){
 		var nodes = event.content;
@@ -38,7 +40,9 @@ function init() {
 		}).iterNodes(function(n){
 			n.hidden = 0;
 		}).draw(2,2,2);
-	});
+	}
+	  sigInst.refresh();
+	);
 
 	// Draw the graph :
 	sigInst.draw();
