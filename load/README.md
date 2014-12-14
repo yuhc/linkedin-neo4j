@@ -2,6 +2,10 @@ Loader of linkedin-neo4j
 ========================
 The loader reads the data from Linkedin API and stores it in Neo4j database.
 
+Run by:
+
+$ python load.py API_KEY SECRET_KEY OAUTH_USER_TOKEN OAUTH_USER_SECRET
+
 Version
 -------
 - Python 2.7+
